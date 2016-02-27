@@ -9,7 +9,7 @@ relative_permalinks: true
 # Setup
 title:            No Painkiller In Cloud
 tagline:          'Break it then fix it, but one at a time'
-description:      'Thouths on Virtualization, Storage, Networking, Open Source and Open Standard'
+description:      'Thouthts on Virtualization, Storage, Networking, Open Source and Open Standard'
 url:              http://hannibalhuang.github.io
 baseurl:          /
 
