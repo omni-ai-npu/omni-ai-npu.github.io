@@ -34,15 +34,15 @@ perioud I got great comments from the community, many of which came from operato
 In Parser we delivered three parts of work in OPNFV B Release: tosca2heat, yang2tosca, and keyword analysis document. The overall architecure
 of the project is shown as follow:
 
-![Parser Architecture](https://github.com/hannibalhuang/hannibalhuang.github.io/blob/master/image/parser-arch.PNG)
+![Parser Architecture](https://raw.githubusercontent.com/hannibalhuang/hannibalhuang.github.io/master/image/parser-arch.PNG)
 
 The tosca2heat module is implemented by integrating heat-translator module which from Liberty is part of Heat.
 
-![tosca2heat arch](https://github.com/hannibalhuang/hannibalhuang.github.io/blob/master/image/tosca2heat.png)
+![tosca2heat arch](https://raw.githubusercontent.com/hannibalhuang/hannibalhuang.github.io/master/image/tosca2heat.png)
 
 The yang2tosca module provides the capability of translating yang based template to tosca template. The user could feed the output of yang2tosca module to tosca2heat to get the final HOT template. 
 
-![yang2tosca arch](https://github.com/hannibalhuang/hannibalhuang.github.io/blob/master/image/yang2tosca.png)
+![yang2tosca arch](https://raw.githubusercontent.com/hannibalhuang/hannibalhuang.github.io/master/image/yang2tosca.png)
 
 The keyword analysis document describes what kind of keyword Parser would like to support for translation. Also in the analysis we identify that tosca-nfv standard would be main upstream standard to replect Parser's requirements.
 
