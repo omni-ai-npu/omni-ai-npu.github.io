@@ -54,26 +54,26 @@ and the team will take a look at it.
 
 ### The People
 
-#### Freshmen PTL
+#### Freshman PTL
 
 Parser PTL is the first open source project lead position I've ever hold. It is a quite challenging and exciting job for me. I try to
 follow the great examples that have been set in the current upstream community, [@Kyle Mestery](https://twitter.com/mestery) for example is 
 one of the greatest PTLs in OpenStack, as much as possible and could only hope that I at least don't fail on a massive scale at the job
 
-I think to be an effective PTL of an open source project, he/she has three major tasks: to lead, to serve, and to organize.
+I think to be an effective PTL of an open source project, he/she has four major tasks: to lead, to serve, to organize, and to build a good project culture.
 
-##### To Lead
+- To Lead
 
 One of the unique requirements for a PTL, to my understanding, which also differentiates its role from committers/contributors, is that PTL needs to 
 provide a vision for the project. PTL should be able to provide a road map to the team in each cycle, about the general direction where the
 project is going. This does not say PTL is a BDFL that mandates the agenda, but at least PTL should be the one to have a clue on what to do, how to do and where to go to.
 
-##### To Serve
+- To Serve
 
 Open source project PTL is not like your ordinary PM in the company, who is responsible for development on a budget and tight schedule. PM will
 get pushy and edgy on you if things not going as he/she expected. However in open source, PTL is like public servant, is there to serve. PTL does not push around, but rather ask around the comments from all the team member, and try to assist as best as he/she could. 
 
-##### To Organize
+- To Organize
 
 Another important requirement for being a PTL is to have the capability to organize both the tech and people structure of the project. For example for Parser, a modular approach was designed from day one and we make sure that each module is independent of another, so that users could even install Parser on there own without installing OPNFV. We ensure that also by mandating every module to be in a format of pypi package when released,
 it is convenient for OPNFV installers to support, for testing project to test and for users to install separately for feature they want.
@@ -81,7 +81,7 @@ it is convenient for OPNFV installers to support, for testing project to test an
 People wise, we have a mechanism of subteam in Parser. The dev work is defined by module or task and each one of these modules or tasks is handled by
 one subteam, which is currently based on company. For example yang2tosca was developed by HPE subteam, keyword analysis document was driven by the ZTE subteam. Later on I will also propose a general governance guidance for committer promotion, so that we as a project could have a healthy growth.
 
-##### To Build A Culture
+- To Build A Culture
 
 One of my favorite quote on open source governance is from a tweet from [@Thomas Graf](https://twitter.com/tgraf__), roughly expressed as
 
@@ -89,7 +89,7 @@ One of my favorite quote on open source governance is from a tweet from [@Thomas
 
 I take this to my heart and also try to foster a culture like this in the project. In Parser we discuss everything openly and equally. I will never force a decision upon anyone, and any decision is a result of voting. Loose consensus is very important that unlike developing a proprietary product, in open source we dev as we go. There is no need to setup a very hard agenda on a day-to-day basis.
 
-#### Member Of The Team
+#### Members Of The Team
 
 Parser project is luckily enough to have many contributors from different companies: Huawei, ZTE, HP, TCS, China Mobile. Every member in the Parser team is kind , nice, and hard working, which makes my job as PTL a lot more easier. Considering the fact that we come from such a diverse background: different companies, different genders, different language, different countries and different time zones, it is pretty amazing to have such a great working relationship. I hope we could contribute like this and have more great devs to join our team.
 
