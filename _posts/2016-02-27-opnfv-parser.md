@@ -81,7 +81,7 @@ it is convinient for OPNFV installers to support, for testing project to test an
 People wise, we have a mechanism of subteam in Parser. The dev work is defined by module or task and each one of these modules or tasks is handled by
 one subteam, which is currently based on company. For example yang2tosca was developed by HPE subteam, keyword anaylisys document was dirven by the ZTE subteam. Later on I will also propose a general governance guidence for committer promotion, so that we as a project could have a healthy growth.
 
-##### The Culture
+##### To Build A Culture
 
 One of my favorite quote on open source governance is from a tweet from [@Thomas Graf](https://twitter.com/tgraf__), roughly expressed as
 
@@ -97,8 +97,8 @@ Parser project is luckily enough to have many contributors from different compan
 
 Parser's development certainly does not stop with B release, we are now planning more interesting features for the next release. For example :
 
-- [x] we will have a new subteam working a new policy2tosca module which translate policy tempalte to tosca template
-- [x] we will have new feature that could enable Parser to dissect a *MOTHER* template into smaller ones and distribute them to the corresponding sites
-- [x] we will also have a new module tosca2kube to translate tosca template to [Kubernetes](https://kubernetes.io/) template, which would build a pathway to a full fledge NFV Testing PaaS.
+- we will have a new subteam working a new policy2tosca module which translate policy tempalte to tosca template
+- we will have new feature that could enable Parser to dissect a *MOTHER* template into smaller ones and distribute them to the corresponding sites
+- we will also have a new module tosca2kube to translate tosca template to [Kubernetes](https://kubernetes.io/) template, which would build a pathway to a full fledge NFV Testing PaaS.
 
 I hope for all of you who are interested in Parser, download and try out the new OPNFV B release, and give us a shout out if you have any ideas or questions !
