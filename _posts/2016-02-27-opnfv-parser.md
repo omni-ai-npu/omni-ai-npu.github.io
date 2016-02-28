@@ -95,10 +95,11 @@ Parser project is luckily enough to have many contributors from different compan
 
 ### The Future
 
-Parser's development certainly does not stop with B release, we are now planning more interesting features for the next release. For example :
+Parser's development certainly does not stop with B release, we are now planning more interesting features for the next release (of course all the features need to be approved by the team). For example :
 
-- we will have a new subteam working a new policy2tosca module which translate policy template to tosca template
-- we will have new feature that could enable Parser to dissect a *MOTHER* template into smaller ones and distribute them to the corresponding sites
-- we will also have a new module tosca2kube to translate tosca template to [Kubernetes](https://kubernetes.io/) template, which would build a pathway to a full fledge NFV Testing PaaS.
+- A new subteam working a new policy2tosca module which translate policy template to tosca template
+- A new feature that could enable Parser to dissect a *MOTHER* template into smaller ones and distribute them to the corresponding sites
+- A new module tosca2kube to translate tosca template to [Kubernetes](https://kubernetes.io/) template, which would build a pathway to a full fledge NFV Testing PaaS.
+- More ...
 
 I hope for all of you who are interested in Parser, download and try out the new OPNFV B release, and give us a shout out if you have any ideas or questions !
