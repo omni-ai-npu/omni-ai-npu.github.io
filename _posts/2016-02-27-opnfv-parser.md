@@ -96,6 +96,7 @@ Parser project is luckily enough to have many contributors from different compan
 ### The Future
 
 Parser's development certainly does not stop with B release, we are now planning more interesting features for the next release. For example :
+
 - [x] we will have a new subteam working a new policy2tosca module which translate policy tempalte to tosca template
 - [x] we will have new feature that could enable Parser to dissect a *MOTHER* template into smaller ones and distribute them to the corresponding sites
 - [x] we will also have a new module tosca2kube to translate tosca template to [Kubernetes](https://kubernetes.io/) template, which would build a pathway to a full fledge NFV Testing PaaS.
