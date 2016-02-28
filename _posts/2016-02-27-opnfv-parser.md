@@ -5,8 +5,8 @@ title: Swimming in Brahmaputra With OPNFV Parser
 
 *OPNFV Parser project was approved by OPNFV TSC on Feb 2015, since then the team have been discussing and developing
 interesting features, and after a year of hard N' fun work, the first release of Parser will be out on March 2016 as
-part of OPNFV Brahmaputra release. Here documented a brief intro about the project as well as personal experiences as
-a freshmen PTL of an open source project.*
+part of OPNFV Brahmaputra release. Here documented a brief introduction of the project, the people and the future of
+this new open source effort.*
 
 ### The Project
 
@@ -19,9 +19,7 @@ feature enhancements.
 From a background of ETSI NFV standard rapporteur, I was hyped about the new opportunities brought by the new OPNFV adventure. 
 When searching for ideas, one thing came into my mind is that although we have defined a rich content of NFV descriptors in ETSI,
 if I want to run these type of descriptors intuitively on OPNFV platform to have my NFV service working, I simply cannot do that.
-In the early MANO GS, and later on specs, OASIS TOSCA and YANG are the most commanly used format. There are also cases that people 
-might use Apache Brooklyn as an NFV Orchestrator and therefore OASIS CAMP will be used to format the descriptor, and this, also 
-cannot be understand by OPNFV platform, which integrates OpenStack that uses Heat for IaaS Orchestration.
+In the early MANO GS, and later on specs, [OASIS TOSCA](https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=tosca) and [YANG](https://tools.ietf.org/html/rfc6020) are the most commanly used format. There are also cases that people might use [Apache Brooklyn](https://brooklyn.apache.org/) as an NFV Orchestrator and therefore [OASIS CAMP](https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=camp) will be used to format the descriptor, and this, also cannot be understand by OPNFV platform, which integrates OpenStack that uses Heat for IaaS Orchestration.
 
 This is where Parser proposal formed from, that a deployment template translation tool is needed for NFV operators to deploy 
 their services on OPNFV in a simple and agile way. The translation output endpoint would be targeting Heat Orchestration Template,
@@ -33,11 +31,20 @@ perioud I got great comments from the community, many of which came from operato
 
 #### Parser In Brahmaputra
 
-In Parser we delivered three parts of work in OPNFV B Release: tosca2heat, yang2tosca, and keyword analysis document. The tosca2heat
-module is implemented by integrating heat-translator module which from Liberty is part of Heat. The yang2tosca module provides the 
-capability of translating yang based template to tosca template. The user could feed the output of yang2tosca module to tosca2heat to 
-get the final HOT template. The keyword analysis document describes what kind of keyword Parser would like to support for translation.
-Also in the analysis we identify that tosca-nfv standard would be main upstream standard to replect Parser's requirements.
+In Parser we delivered three parts of work in OPNFV B Release: tosca2heat, yang2tosca, and keyword analysis document. The overall architecure
+of the project is shown as follow:
+
+![Parser Architecture](https://github.com/hannibalhuang/hannibalhuang.github.io/blob/master/image/parser-arch.PNG)
+
+The tosca2heat module is implemented by integrating heat-translator module which from Liberty is part of Heat.
+
+![tosca2heat arch](https://github.com/hannibalhuang/hannibalhuang.github.io/blob/master/image/tosca2heat.png)
+
+The yang2tosca module provides the capability of translating yang based template to tosca template. The user could feed the output of yang2tosca module to tosca2heat to get the final HOT template. 
+
+![yang2tosca arch](https://github.com/hannibalhuang/hannibalhuang.github.io/blob/master/image/yang2tosca.png)
+
+The keyword analysis document describes what kind of keyword Parser would like to support for translation. Also in the analysis we identify that tosca-nfv standard would be main upstream standard to replect Parser's requirements.
 
 The B release document could be found at [here](http://artifacts.opnfv.org/parser/brahmaputra/docs/parser_docs/index.html), and our repo
 could be found at [here](https://gerrit.opnfv.org/gerrit/#/admin/projects/?filter=parser). From the main [wiki](https://wiki.opnfv.org/parser)
@@ -50,7 +57,7 @@ and the team will take a look at it.
 #### Freshmen PTL
 
 Parser PTL is the first open source project lead position I've ever hold. It is a quite chanllenging and exciting job for me to do. I try to
-follow the great examples that have been set in the current upstream community, [Kyle Mestery](https://twitter.com/mestery) for example is 
+follow the great examples that have been set in the current upstream community, [@Kyle Mestery](https://twitter.com/mestery) for example is 
 one of the greatest PTLs in OpenStack, as much as possible and could only hope that I at least don't fail on a massive scale at the job
 
 I think to be an eefective PTL of an open source project, he/she has three major tasks: to lead, to serve, and to organize.
@@ -76,7 +83,7 @@ one subteam, which is currently based on company. For example yang2tosca was dev
 
 ##### The Culture
 
-One of my favorite quote on open source governance is from a tweet from [Thomas Graf](https://twitter.com/tgraf__), roughly as
+One of my favorite quote on open source governance is from a tweet from [@Thomas Graf](https://twitter.com/tgraf__), roughly expressed as
 
 > The best governance for open source project, is to have loose consensus based on direct democracy.
 
@@ -88,6 +95,9 @@ Parser project is luckily enough to have many contributors from different compan
 
 ### The Future
 
-Parser's development certainly does not stop with B release, we are now planning more interesting features for the next release. For example we will have a new subteam working a new policy2tosca module which translate policy tempalte to tosca template, we will have new feature that could enable Parser to dissect a **MOTHER** template into smaller ones and distribute them to the corresponding sites, and we will also have a new module tosca2kube to build a pathway to a full fledge NFV Testing PaaS.
+Parser's development certainly does not stop with B release, we are now planning more interesting features for the next release. For example :
+- [x] we will have a new subteam working a new policy2tosca module which translate policy tempalte to tosca template
+- [x] we will have new feature that could enable Parser to dissect a *MOTHER* template into smaller ones and distribute them to the corresponding sites
+- [x] we will also have a new module tosca2kube to translate tosca template to [Kubernetes](https://kubernetes.io/) template, which would build a pathway to a full fledge NFV Testing PaaS.
 
 I hope for all of you who are interested in Parser, download and try out the new OPNFV B release, and give us a shout out if you have any ideas or questions !
