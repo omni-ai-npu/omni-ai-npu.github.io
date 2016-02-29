@@ -96,7 +96,7 @@ Parser project is luckily enough to have many contributors from different compan
 
 ### The Future
 
-Parser's development certainly does not stop with B release, we are now brainstorming more interesting features for the next release (of course all the features need to be approved by the team). For example :
+Parser's development certainly does not stop with B release, we are now brainstorming more interesting features for the next release (of course which of these features will be included in Rel C need to be approved by the team). For example :
 
 - A new subteam working a new policy2tosca module which translate policy template to tosca template
 - A new feature that could enable Parser to dissect a *MOTHER* template into smaller ones and distribute them to the corresponding sites
