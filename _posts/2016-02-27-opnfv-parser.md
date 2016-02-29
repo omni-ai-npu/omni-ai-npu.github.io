@@ -22,16 +22,13 @@ if I want to run these type of descriptors intuitively on OPNFV platform to have
 In the early MANO GS, and later on specs, [OASIS TOSCA](https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=tosca) and [YANG](https://tools.ietf.org/html/rfc6020) are the most commonly used format. There are also cases that people might use [Apache Brooklyn](https://brooklyn.apache.org/) as an NFV Orchestrator and therefore [OASIS CAMP](https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=camp) will be used to format the descriptor, and this, also cannot be understand by OPNFV platform, which integrates OpenStack that uses Heat for IaaS Orchestration.
 
 This is where Parser proposal formed from, that a deployment template translation tool is needed for NFV operators to deploy 
-their services on OPNFV in a simple and agile way. The translation output endpoint would be targeting Heat Orchestration Template,
-while TOSCA serves as the intermediate template format since I found that Heat-Translator project in OpenStack already taking care
-of tosca2heat translation.
+their services on OPNFV in a simple and agile way. 
 
-I still remember it took two months of discussion to have Parser approved as an incubated project by the TSC, and during that review
-period I got great comments from the community, many of which came from operators that had real work experiences. 
+#### Parser Overview
 
-#### Parser In Brahmaputra
+In Parser, The translation output endpoint would be targeting Heat Orchestration Template, while TOSCA serves as the intermediate template format since I found that Heat-Translator project in OpenStack already taking care of tosca2heat translation, and the input would be any template that Parser supports.
 
-In Parser we delivered three parts of work in OPNFV B Release: tosca2heat, yang2tosca, and keyword analysis document. The overall architecture
+Currently Parser has three modules: tosca2heat, yang2tosca, and keyword analysis document. The overall architecture
 of the project is shown as follow:
 
 ![Parser Architecture](https://raw.githubusercontent.com/hannibalhuang/hannibalhuang.github.io/master/image/parser-arch.PNG)
@@ -44,13 +41,17 @@ The yang2tosca module provides the capability of translating yang based template
 
 ![yang2tosca arch](https://raw.githubusercontent.com/hannibalhuang/hannibalhuang.github.io/master/image/yang2tosca.png)
 
-The keyword analysis document describes what kind of keyword Parser would like to support for translation. Also in the analysis we identify that tosca-nfv standard would be main upstream standard to reflect Parser's requirements.
+The keyword analysis document describes what kind of keyword Parser would like to support for translation. Also in the analysis we identify that [tosca-nfv](http://docs.oasis-open.org/tosca/tosca-nfv/v1.0/tosca-nfv-v1.0.html) standard would be main upstream standard to reflect Parser's requirements.
 
-The B release document could be found at [here](http://artifacts.opnfv.org/parser/brahmaputra/docs/parser_docs/index.html), and our repo
-could be found at [here](https://gerrit.opnfv.org/gerrit/#/admin/projects/?filter=parser). From the main [wiki](https://wiki.opnfv.org/parser)
-page you could find necessary info about Parser project (meeting time, HowToContribute guide, etc) if you are interested, and everyone
-is welcomed to contribute to the project ! Just send an email to opnfv mailinglist with [parser] in the subject and describe your idea, 
-and the team will take a look at it.
+#### The B Release
+
+This is the first time for me to participate in a open source project release, and here are some of the lessons I learnt through the process:
+
+- Manage your expectations: Your project probably have a lot of good stuff, but be careful about what you will release. It is always a good idea to have a limited scope for a give release so that the project would deliver in time and gracefully.
+- Prepare as early as possible: Release engineer will take a lot of effort, so after you have defined the limited scope of your project's release, start the work early. We were in a frenzy during the later days of the B release and I would like to avoid it in the next release.
+- Don't be shy: Ask support from the release team, and get interactive. Never sit in a silo and wait for the release team to contact you about the problem of your project. For B release, Parser got a lot of great help from the community, such as the [Yardstick](https://wiki.opnfv.org/yardstick) team, the [compass4nfv](https://wiki.opnfv.org/compass4nfv) team, the [Documentation](https://wiki.opnfv.org/documentation_projects/opnfv_documentation) team (thanks Ryota!)
+
+The B release document could be found at [here](http://artifacts.opnfv.org/parser/brahmaputra/docs/parser_docs/index.html), and our repo could be found at [here](https://gerrit.opnfv.org/gerrit/#/admin/projects/?filter=parser). From the main [wiki](https://wiki.opnfv.org/parser) page you could find necessary info about Parser project (meeting time, HowToContribute guide, etc) if you are interested, and everyone is welcomed to contribute to the project ! Just send an email to opnfv mailinglist with [parser] in the subject and describe your idea, and the team will take a look at it.
 
 ### The People
 
@@ -95,7 +96,7 @@ Parser project is luckily enough to have many contributors from different compan
 
 ### The Future
 
-Parser's development certainly does not stop with B release, we are now planning more interesting features for the next release (of course all the features need to be approved by the team). For example :
+Parser's development certainly does not stop with B release, we are now brainstorming more interesting features for the next release (of course all the features need to be approved by the team). For example :
 
 - A new subteam working a new policy2tosca module which translate policy template to tosca template
 - A new feature that could enable Parser to dissect a *MOTHER* template into smaller ones and distribute them to the corresponding sites
