@@ -43,6 +43,8 @@ The yang2tosca module provides the capability of translating yang based template
 
 The keyword analysis document describes what kind of keyword Parser would like to support for translation. Also in the analysis we identify that [tosca-nfv](http://docs.oasis-open.org/tosca/tosca-nfv/v1.0/tosca-nfv-v1.0.html) standard would be main upstream standard to reflect Parser's requirements.
 
+![keyword](https://raw.githubusercontent.com/hannibalhuang/hannibalhuang.github.io/master/image/keyword.png)
+
 #### The B Release
 
 This is the first time for me to participate in a open source project release, and here are some of the lessons I learnt through the process:
