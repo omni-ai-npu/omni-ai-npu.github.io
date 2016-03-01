@@ -58,10 +58,9 @@ The B release document could be found at [here](http://artifacts.opnfv.org/parse
 #### Freshman PTL
 
 Parser PTL is the first open source project lead position I've ever hold. It is a quite challenging and exciting job for me. I try to
-follow the great examples that have been set in the current upstream community, [@Kyle Mestery](https://twitter.com/mestery) for example is 
-one of the greatest PTLs in OpenStack, as much as possible and could only hope that I at least don't fail on a massive scale at the job
+follow the great examples that have been set in the current upstream community, [@Kyle Mestery](https://twitter.com/mestery) for example is one of the greatest PTLs in OpenStack, as much as possible and could only hope that I at least don't fail on a massive scale at the job
 
-I think to be an effective PTL of an open source project, he/she has four major tasks: to lead, to serve, to organize, and to build a good project culture.
+From what I have learnt through working with OPNFV Parser, I think to be an effective PTL of an open source project, he/she has four major tasks: to lead, to serve, to organize, and to build a good project culture.
 
 - To Lead
 
