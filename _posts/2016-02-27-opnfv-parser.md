@@ -99,9 +99,11 @@ Parser project is luckily enough to have many contributors from different compan
 
 Parser's development certainly does not stop with B release, we are now brainstorming more interesting features for the next release (of course which of these features will be included in Rel C need to be approved by the team). For example :
 
+- More collaborative development with the OpenStack Heat Translator team on the keyword support
+- More enhancement for yang2tosca including features like NUMA support, GUI and so forth. 
 - A new subteam working a new policy2tosca module which translate policy template to tosca template
 - A new feature that could enable Parser to dissect a *MOTHER* template into smaller ones and distribute them to the corresponding sites
-- A new module tosca2kube to translate tosca template to [Kubernetes](https://kubernetes.io/) template, which would build a pathway to a full fledge NFV Testing PaaS.
+- A new module tosca2kube to translate tosca template to [Kubernetes](https://kubernetes.io/) template, which would build a pathway to a full fledge NFVI Testing PaaS.
 - More ...
 
 I hope for all of you who are interested in Parser, download and try out the new OPNFV B release, and give us a shout out if you have any ideas or questions !
