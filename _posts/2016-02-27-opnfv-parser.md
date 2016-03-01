@@ -83,7 +83,7 @@ one subteam, which is currently based on company. For example yang2tosca was dev
 
 - To Build A Culture
 
-One of my favorite quote on open source governance is from a tweet from [@Thomas Graf](https://twitter.com/tgraf__), roughly expressed as
+One of my favorite quote on open source governance is from a tweet from [@Thomas Graf](https://twitter.com/tgraf__) (If I remember correctly), roughly expressed as
 
 > The best governance for open source project, is to have loose consensus based on direct democracy.
 
