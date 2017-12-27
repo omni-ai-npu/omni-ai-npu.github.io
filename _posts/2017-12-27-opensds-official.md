@@ -17,9 +17,9 @@ But we just want a place to store stuff, could we make it a bit simpler instead 
 
 #### Community
 
-The OpenSDS community was born out of the motivation described above with the sole goal of consolidating storage industry to provide a simple solution for the user. OpenSDS community governance currently consists of Technical Steering Committee and End User Advisory Commitee, of which consists of representatives from member companies like Intel, IBM, Hitachi, Huawei, Vodafone, Yahoo Japan and NTT respectively. We are looking forward to having more members joining in 2018 and also establishing the official board to handle larger scale community operation. 
+The OpenSDS community was born out of the motivation described above with the sole goal of consolidating storage industry efforts to provide a simple solution for the user. OpenSDS community governance currently consists of Technical Steering Committee (TSC) and End User Advisory Commitee (EUAC), which consists of representatives from member companies like Intel, IBM, Hitachi, Huawei, Vodafone, Yahoo Japan and NTT. We are looking forward to having more members joining in 2018 and also establishing the official board to handle larger scale community operation. 
 
-It should be noted  it is somewhat extraordinary for a new communtiy to have EUAC in such early stage. This is actually one distinguishing point about OpenSDS: we care about user requirements. We don't want to be another open source project that deliver something only developers understand. We want the user participate and feedback every step of the way of the development process, and this enablement of user voice differentiates OpenSDS from most of its peer projects IMHO.
+It should be noted that it is somewhat extraordinary for a new communtiy to have structure like EUAC in such early stage. This is actually one distinguishing point about OpenSDS: we care about user requirements. We don't want to be yet another open source project that delivers something only developers understand. We want the user participate and feedback every step of the way of the development process, and this enablement of user voice differentiates OpenSDS from most of its peer projects in my opinion.
 
 ### OpenSDS Zealand Release
 
