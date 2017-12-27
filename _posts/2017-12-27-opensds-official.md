@@ -27,11 +27,9 @@ The Zealand Release is the beta release of OpenSDS software (yes this is a beta 
 
 #### Architecture Overview
 
+![OpenSDS Zealand Release Architecture](https://github.com/opensds/opensds/raw/master/architecture.png)
 
-
-#### Hotpot Project - OpenSDS Controller
-
-#### Sushi Project - OpenSDS Northbound Plugin
+As shown in the above figure, OpenSDS controller 
 
 ### Service Oriented Storage Orchestration
 
