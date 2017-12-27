@@ -3,7 +3,7 @@ layout: post
 title: Make Storage Simple Again with OpenSDS
 ---
 
-*[OpenSDS](https://opensds.io) is a new collaborative open source community under Linux Foundation established by the end of 2016. Throughout year 2017 the core dev team has been working arduously on prototyping various exciting new ideas and also delivering the first beta release. Now we are proud to anounce the first release coming out of the OpenSDS community, and this blog post aims to provide a detail run down of the OpenSDS design and functionality*
+*[OpenSDS](https://opensds.io) is a new collaborative open source community under Linux Foundation established by the end of 2016. Throughout year 2017 the core dev team has been working arduously on prototyping various exciting new ideas and also delivering the first beta release. Now we are proud to anounce the beta release coming out of the OpenSDS community, and this blog post aims to provide a detail run down of the OpenSDS design and functionality*
 
 ### Background
 
@@ -23,7 +23,11 @@ It should be noted that it is somewhat extraordinary for a new communtiy to have
 
 ### OpenSDS Zealand Release
 
+The Zealand Release is the beta release of OpenSDS software (yes this is a beta release, not official first release). OpenSDS provides a policy driven orchestration platform which provides a unified management entry point for user, an aggregation view of hetrogeneous storage resources, as well as an automated provision engine.
+
 #### Architecture Overview
+
+
 
 #### Hotpot Project - OpenSDS Controller
 
