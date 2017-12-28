@@ -33,7 +33,7 @@ It should be noted that it is somewhat extraordinary for a new communitiy to hav
 
 OpenSDS is **not just yet another controller project** that will be jacked into the current cloud computing stack, or dumped to replace any existing great open source solution which already has a good ecosystem just because *there is a group of people* think it is somehow more awesome than others. 
 
-OpenSDS community always positions itself as a complimentary effort to the existing ecosystem, and values collaboration over blind meaningless competition (*my stuff is better than your stuff*)
+OpenSDS community always positions itself as a complimentary effort to the existing ecosystem, and values collaboration over blind meaningless competition (typical *my stuff is better thus should replace your stuff* nonsense)
 
 As will be shown in the following sections, OpenSDS provides a unique value for storage management in cloud computing and explores new exciting possibilities that no one has tried before (at least in the open source field)
 
