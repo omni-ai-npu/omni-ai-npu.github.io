@@ -112,4 +112,14 @@ Detailed procedure on how you could play OpenSDS with Service Catalog is [here](
 
 OpenSDS team has a strong intention to work with the OSB API community in the future to forging the way of storage service. As a matter of fact OpenSDS service broker implementation has been documented as one of the [official use cases](https://github.com/openservicebrokerapi/servicebroker/blob/master/gettingStarted.md#go)
 
+### Cross Community Efforts
+
+* OPNFV Stor4NFV project: https://wiki.opnfv.org/display/STOR/Stor4NFV+Architecture
+
 ### The Future
+
+OpenSDS team is looking forward to have the first official release Aruba next year. We welcome developers to join us in this exciting venture and also users to provide feedback in our development cycle.
+
+Please feel free to contact our team via the following methods:
+* Slack: opensds.slack.com
+* Google Group: https://groups.google.com/forum/#!forum/opensds-dev 
