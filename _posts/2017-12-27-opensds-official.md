@@ -43,12 +43,13 @@ The Zealand Release is the beta release of OpenSDS software (yes this is a beta 
 * a **unified management entry point for user**
 * an **aggregation view of heterogeneous storage resources**
 * an **automated provisioning engine**
+* a **standardized layered architecture that could ease the storage adaptation in cloud native era**
 
 ## Architecture Overview
 
 ![OpenSDS Zealand Release Architecture](https://github.com/opensds/opensds/raw/master/architecture.png)
 
-As shown in the above figure, OpenSDS software consists of two main components: **Controller** and **NBP (North Bound Plugin)**, both of which adopt a **layered architecture** that standardize the communication flow. We will go into the details of the two components in the following subsections:
+As shown in the above figure, OpenSDS software consists of two main components: **Controller** and **NBP (North Bound Plugin)**, both of which adopt a **layered architecture** that standardize the management workflow. We will go into the details of the two components in the following subsections:
 
 ### Hotpot - OpenSDS Controller Project
 
