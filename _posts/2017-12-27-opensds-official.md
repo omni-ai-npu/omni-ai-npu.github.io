@@ -141,14 +141,17 @@ OpenSDS team has a strong intention to work with the OSB API community in the fu
 
 ## Cross Community Efforts
 
-* OPNFV Stor4NFV project: https://wiki.opnfv.org/display/STOR/Stor4NFV+Architecture
+* [OPNFV Stor4NFV project](https://wiki.opnfv.org/display/STOR/Stor4NFV+Architecture)
 
 # The Future
 
 OpenSDS team is looking forward to have the first official release Aruba next year. We welcome developers to join us in this exciting venture and also users to provide feedback in our development cycle.
 
-We will look for helps on monitoring and tracing components for OpenSDS. We will also be looking at adding file and object interface for OpenSDS controller. Machine learning is another aspect we will actively investigate in 2018.
+We will look for helps on monitoring and tracing components for OpenSDS. We will also be looking at adding file and object interface for OpenSDS controller. Machine learning is another aspect we will actively investigate in 2018. More detailed roadmap for controller project could be found [here](https://github.com/opensds/opensds/wiki/OpenSDS-Controller-Project-Roadmap)
 
 Please feel free to contact our team via the following methods:
-* Slack: opensds.slack.com
-* Google Group: https://groups.google.com/forum/#!forum/opensds-dev 
+* [Slack](https://opensds.slack.com)
+* [Google Group](https://groups.google.com/forum/#!forum/opensds-dev) for offline discussion as well as weekly team meeting information
+* Fork OpenSDS repo and [submit](https://github.com/opensds/opensds/wiki/OpenSDS-Controller-Project-Contribution-Tutorial) a PR
+* DM me on [twitter](https://twitter.com/nopainkiller)
+
