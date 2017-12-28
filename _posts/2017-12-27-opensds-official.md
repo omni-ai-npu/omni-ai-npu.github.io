@@ -5,7 +5,7 @@ title: Make Storage Simple Again with OpenSDS
 
 *[OpenSDS](https://opensds.io) is a new collaborative open source community under Linux Foundation established by the end of 2016. Throughout year 2017 the core dev team has been working arduously on prototyping various exciting new ideas and also delivering the [first beta release](https://github.com/opensds/opensds/tree/stable/zealand). Now we are proud to announce the beta release coming out of the OpenSDS community, and this blog post aims to provide a detail run down of the OpenSDS design and functionality*
 
-*Huge thanks to our dev team Leon Wang, Xing Yang, Edison Xiang, Eric Xu, Jiajun to make this release happen*
+*Huge thanks to our dev team Leon Wang, Xing Yang, Edison Xiang, Eric Xu and other members to make this release happen*
 
 # Background
 
