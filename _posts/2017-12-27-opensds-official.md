@@ -31,7 +31,10 @@ As will be shown in the following sections, OpenSDS provides a unique value for 
 
 ### OpenSDS Zealand Release
 
-The Zealand Release is the beta release of OpenSDS software (yes this is a beta release, not official first release). OpenSDS provides a policy driven orchestration platform which provides a **unified management entry point for user**, an **aggregation view of hetrogeneous storage resources**, as well as an **automated provision engine**.
+The Zealand Release is the beta release of OpenSDS software (yes this is a beta release, not official first release). OpenSDS provides a policy driven orchestration platform which provides 
+* a **unified management entry point for user**
+* an **aggregation view of hetrogeneous storage resources**
+* an **automated provisioning engine**
 
 #### Architecture Overview
 
@@ -55,7 +58,7 @@ As shown in the above figure, OpenSDS supports operation on storage pool level, 
 
 * Orchestration layer: there are two components in this layer: *Selector* and *Policy Controller*. Selector provides an interface for policy enforcement (the enforcement is carried out by the *filter*). Policy Controller provides an interface for two functionalities: *Register* (carried out by *storagetag* function for admin to tag storage capabilities) and *Executor* (for taskflow operation). Therefore the reader could see that the orchestration layer basically provides the policy driven automation semantics for OpenSDS. 
 
-Moreover, OpenSDS also could connect to external **policy engines** like **[OPA]**(https://github.com/open-policy-agent/opa). If you are interested please check out our [experiment](https://github.com/opensds/opensds/tree/opa-scheduler) which has not been included in Zealand release.
+Moreover, OpenSDS also could connect to external **policy engines** like [OPA](https://github.com/open-policy-agent/opa). If you are interested please check out our [experiment](https://github.com/opensds/opensds/tree/opa-scheduler) which has not been included in Zealand release.
 
 * Control layer: the functionality of this layer is carried out by the *volumecontroller* function which interacts with the hub to enforce the decisions made by the controller module.
 
@@ -65,22 +68,48 @@ The hub module also has a layered architecture: dock layer and driver layer.
 
 * Dock layer: The Dock provides a unified southbound abstraction layer for all the underlying storage resources. It interacts with controller module via gRPC which provides a nice decoupling feature. In essence the user could deploy OpenSDS dock on any number of storage nodes where OpenSDS controller module deployed in the master node. This microservice architecture enables OpenSDS to avoid the general pitfall of a centralized controller that it could not be distributed or scaled out very good.
 
-The usage of gRPC also enables OpenSDS Dock to add many southbound resource type as it see fit. For example we have experiments with [CSI](https://github.com/opensds/opensds/tree/csi-driver) and [Swordfish](https://github.com/opensds/opensds/tree/swordfish_implementation) southbound supports by adding their protobuf based data models to the Dock. The CSI southbound support experiment is especially interesting because it positions OpenSDS as a **SO (Storage Orchestrator)** in addtion to the CO (container orchestrator) concept defined in the current CSI spec.
+The usage of gRPC also enables OpenSDS Dock to add many southbound resource type as it see fit. For example we have experiments with [CSI](https://github.com/opensds/opensds/tree/csi-driver) and [Swordfish](https://github.com/opensds/opensds/tree/swordfish_implementation) southbound supports by adding their protobuf based data models to the Dock. The CSI southbound support experiment is especially interesting because it positions OpenSDS as a **SO (Storage Orchestrator)** in addtion to the CO (container orchestrator) concept defined in the current CSI spec. *（Be noted that both CSI and Swordfish southbound implementation are not included in Zealand release for its experiment nature.）*
 
 <img src="https://github.com/hannibalhuang/hannibalhuang.github.io/raw/master/image/opensds-csi-sb-impact.PNG" width="500" height="300">
 
 * Driver layer: All of the storage resource drivers could be found at this layer. For Zealand release OpenSDS natively provides the drivers for [LVM](https://github.com/opensds/opensds/wiki/Local-Cluster-Installation-with-LVM), [Ceph](https://github.com/opensds/opensds/wiki/Local-Cluster-Installation-with-Ceph) and [Cinder](https://github.com/opensds/opensds/wiki/Local-Cluster-Installation-with-Cinder-Standalone). Drivers from storage vendor product are more than welcomed.
 
+#### *DB Module*
+
+The DB module is designed to be pluggable and our default option is to use [ETCD](https://github.com/coreos/etcd). ETCD will store all the OpenSDS cluster config and state information.
+
 #### Sushi - OpenSDS Northbound Plugin Project
 
+OpenSDS NBP projects provides the Flex plugin and external storage provisioner for OpenSDS to be used as a southbound to Kubernetes. NBP also provides the plugin for CSI alpha version in Kubernetes 1.9 and serivce broker which is used for integration with Kubernetes Service Catalog.
 
+#### Play Around With OpenSDS Zealand
+
+Please checkout detail procedures for playing around OpenSDS from the [wiki](https://github.com/opensds/opensds/wiki). In a word OpenSDS could be deployed via Ansible and also available in docker format.
 
 ### Service Oriented Storage Orchestration
 
-#### Kubernetes Integration with OpenSDS
+One of the new features we experimented with OpenSDS is to adopt a new service oriented storage architecture which could be illustrated as follows:
 
-#### OpenStack integration with OpenSDS
+<img src="https://github.com/hannibalhuang/hannibalhuang.github.io/raw/master/image/opensds-serive-arch.PNG" width="500" height="300">
+
+It means that in the upcoming cloud native computing era, in order to make storage management and offering more simple to consume, storage will be ultimately offered as a service to the end user. The user should no longer concern about any detailed storage knowledge other than the general storage need for its application. Through the interaction layer (which could be an AI bot), the user just request a storage service for its app to consume, and the service layer will interact with the orchestration layer to handle all the details, thus shield user away from the storage domain specific knowledge.
+
+[Open Service Broker API](https://github.com/openservicebrokerapi/servicebroker), [Kubernetes Service Catalog](https://github.com/kubernetes-incubator/service-catalog) and OpenSDS will together play imortant roles in this transformation.
+
+#### Kubernetes Service Catalog Integration with OpenSDS
+
+One thing we are excited about OpenSDS is that it provides the possibility of a new way of integration with the Kubernetes platform: via Service Catalog. We could arbiturily just write a new CRD controller for OpenSDS, however it is time consuming and potentially wheel-reinventing. The reason why we choose Service Catalog is that as a incubated project, it has already been in a great shape and a great community. Moreover the service broker semantic of service class and service plan fits well into the profile driven architecture that OpenSDS has adopted.
+
+Once user chooses a storage service plan via Kubernetes Service Catalog, the plan will launch a service instance which will materalize a serice class that could be translated to a storage profile by OpenSDS Service Boker. Then OpenSDS through nbp consume the storage profile outlined by the serice class and automatically setup, prepare and provision the storage resources without any involvement of the user. Then the user bind the storage information provided by OpenSDS to the pod via **pod-reset** and then it just spawn up the application cluster as usual.
+
+In this way we provide a nice out-of-band storage service for Kubernetes users, and if you combined with the CSI southbound support, you could have a really nice architecture where you don't have a long storage control path and all the "XXX-set" you have to learn.
+
+<img src="https://github.com/hannibalhuang/hannibalhuang.github.io/raw/master/image/opensds-csi-sb-arch.PNG" width="500" height="300">
+
+Detailed procedure on how you could play OpenSDS with Service Catalog is [here](https://github.com/opensds/nbp/blob/master/service-broker/INSTALL.md)
 
 #### More on Service Broker
+
+OpenSDS team has a strong intention to work with the OSB API community in the future to forging the way of storage service. As a matter of fact OpenSDS service broker implementation has been documented as one of the [official use cases](https://github.com/openservicebrokerapi/servicebroker/blob/master/gettingStarted.md#go)
 
 ### The Future
