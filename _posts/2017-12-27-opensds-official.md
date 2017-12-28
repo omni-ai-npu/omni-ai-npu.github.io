@@ -27,7 +27,7 @@ OpenSDS is **not just yet another controller project** that will be jacked into 
 
 As will be shown in the following sections, OpenSDS provides a unique value for storage management in cloud computing and explores new exciting possibilities that no one has tried before (at least in the open source field)
 
-<img src="https://github.com/hannibalhuang/hannibalhuang.github.io/raw/master/image/boldly%20go.jpg" width="600" height="400">
+<img src="https://github.com/hannibalhuang/hannibalhuang.github.io/raw/master/image/boldly%20go.jpg" width="500" height="300">
 
 # OpenSDS Zealand Release
 
@@ -54,7 +54,7 @@ The controller module has a layered architecture: API layer, Orchestration layer
 
 [OpenSDS API](https://github.com/opensds/opensds/blob/master/openapi-spec/swagger.yaml) provides the entry point for users. In Zealand release, other than the basic block storage managament operations, OpenSDS offers a set of additional apis for users to consume:
 
-<img src="https://github.com/hannibalhuang/hannibalhuang.github.io/raw/master/image/opensds-api-swagger.PNG" width="600" height="500">
+<img src="https://github.com/hannibalhuang/hannibalhuang.github.io/raw/master/image/opensds-api-swagger.PNG" width="500" height="300">
 
 As shown in the above figure, OpenSDS supports operation on storage pool level, OpenSDS Dock and OpenSDS profile. Storage pool is an abstraction that admin could define. Profile is another OpenSDS feature that we want the controller to be profile/policy driven so that user could have a declarative way of requiring storage resource. We will cover profile and dock in later sections in detail.
 
@@ -78,7 +78,7 @@ The Dock provides a unified southbound abstraction layer for all the underlying 
 
 The usage of gRPC also enables OpenSDS Dock to add many southbound resource type as it see fit. For example we have experiments with [CSI](https://github.com/opensds/opensds/tree/csi-driver) and [Swordfish](https://github.com/opensds/opensds/tree/swordfish_implementation) southbound supports by adding their protobuf based data models to the Dock. The CSI southbound support experiment is especially interesting because it positions OpenSDS as a **SO (Storage Orchestrator)** in addtion to the CO (container orchestrator) concept defined in the current CSI spec. *（Be noted that both CSI and Swordfish southbound implementation are not included in Zealand release for its experiment nature.）*
 
-<img src="https://github.com/hannibalhuang/hannibalhuang.github.io/raw/master/image/opensds-csi-sb-impact.PNG" width="500" height="300">
+<img src="https://github.com/hannibalhuang/hannibalhuang.github.io/raw/master/image/opensds-csi-sb-impact.PNG" width="300" height="200">
 
 * Driver layer: All of the storage resource drivers could be found at this layer. For Zealand release OpenSDS natively provides the drivers for [LVM](https://github.com/opensds/opensds/wiki/Local-Cluster-Installation-with-LVM), [Ceph](https://github.com/opensds/opensds/wiki/Local-Cluster-Installation-with-Ceph) and [Cinder](https://github.com/opensds/opensds/wiki/Local-Cluster-Installation-with-Cinder-Standalone). Drivers from storage vendor product are more than welcomed.
 
