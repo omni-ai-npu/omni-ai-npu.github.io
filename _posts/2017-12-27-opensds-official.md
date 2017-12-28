@@ -3,7 +3,7 @@ layout: post
 title: Make Storage Simple Again with OpenSDS
 ---
 
-*[OpenSDS](https://opensds.io) is a new collaborative open source community under Linux Foundation established by the end of 2016. Throughout year 2017 the core dev team has been working arduously on prototyping various exciting new ideas and also delivering the first beta release. Now we are proud to anounce the beta release coming out of the OpenSDS community, and this blog post aims to provide a detail run down of the OpenSDS design and functionality*
+*[OpenSDS](https://opensds.io) is a new collaborative open source community under Linux Foundation established by the end of 2016. Throughout year 2017 the core dev team has been working arduously on prototyping various exciting new ideas and also delivering the [first beta release](https://github.com/opensds/opensds/tree/stable/zealand). Now we are proud to anounce the beta release coming out of the OpenSDS community, and this blog post aims to provide a detail run down of the OpenSDS design and functionality*
 
 # Background
 
@@ -44,7 +44,7 @@ As shown in the above figure, OpenSDS software consists of two main components: 
 
 ### Hotpot - OpenSDS Controller Project
 
-Sitting at the core of OpenSDS architecture is the OpenSDS controller component developed by the Hotpot project team. OpenSDS controller project adopted a microservice architecture and got three submodules: controller, hub and db.
+Sitting at the core of OpenSDS architecture is the OpenSDS controller component developed by the [Hotpot](https://github.com/opensds/opensds) project team. OpenSDS controller project adopted a microservice and layered architecture. It got three submodules: controller, hub and db.
 
 ### *Controller Module*
 
@@ -80,7 +80,9 @@ The usage of gRPC also enables OpenSDS Dock to add many southbound resource type
 
 <img src="https://github.com/hannibalhuang/hannibalhuang.github.io/raw/master/image/opensds-csi-sb-impact.PNG" width="300" height="200">
 
-* Driver layer: All of the storage resource drivers could be found at this layer. For Zealand release OpenSDS natively provides the drivers for [LVM](https://github.com/opensds/opensds/wiki/Local-Cluster-Installation-with-LVM), [Ceph](https://github.com/opensds/opensds/wiki/Local-Cluster-Installation-with-Ceph) and [Cinder](https://github.com/opensds/opensds/wiki/Local-Cluster-Installation-with-Cinder-Standalone). Drivers from storage vendor product are more than welcomed.
+#### Driver layer
+
+All of the storage resource drivers could be found at this layer. For Zealand release OpenSDS natively provides the drivers for [LVM](https://github.com/opensds/opensds/wiki/Local-Cluster-Installation-with-LVM), [Ceph](https://github.com/opensds/opensds/wiki/Local-Cluster-Installation-with-Ceph) and [Cinder](https://github.com/opensds/opensds/wiki/Local-Cluster-Installation-with-Cinder-Standalone). Drivers from storage vendor product are more than welcomed.
 
 ### *DB Module*
 
@@ -88,7 +90,7 @@ The DB module is designed to be pluggable and our default option is to use [ETCD
 
 ### Sushi - OpenSDS Northbound Plugin Project
 
-OpenSDS NBP projects provides the Flex plugin and external storage provisioner for OpenSDS to be used as a southbound to Kubernetes. NBP also provides the plugin for CSI alpha version in Kubernetes 1.9 and serivce broker which is used for integration with Kubernetes Service Catalog.
+OpenSDS [Sushi](https://github.com/opensds/nbp) project provides the Flex plugin and external storage provisioner for OpenSDS to be used as a southbound to Kubernetes. Sushi also provides the plugin for CSI alpha version in Kubernetes 1.9 and serivce broker which is used for integration with Kubernetes Service Catalog.
 
 ### Play Around With OpenSDS Zealand
 
