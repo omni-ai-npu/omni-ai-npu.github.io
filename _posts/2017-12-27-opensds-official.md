@@ -43,13 +43,13 @@ As shown in the above figure, OpenSDS software consists of two main components: 
 
 Sitting at the core of OpenSDS architecture is the OpenSDS controller component developed by the Hotpot project team. OpenSDS controller project adopted a microservice architecture and got three submodules: controller, hub and db.
 
-##### controller module
+#### *Controller Module*
 
 The controller module has a layered architecture: API layer, Orchestration layer, Controll layer
 
 * API layer: [OpenSDS API](https://github.com/opensds/opensds/blob/master/openapi-spec/swagger.yaml) provides the entry point for users. In Zealand release, other than the basic block storage managament operations, OpenSDS offers a set of additional apis for users to consume:
 
-![OpenSDS API Swagger](https://github.com/hannibalhuang/hannibalhuang.github.io/raw/master/image/opensds-api-swagger.PNG)
+![OpenSDS API Swagger](https://github.com/hannibalhuang/hannibalhuang.github.io/raw/master/image/opensds-api-swagger.PNG|200px)
 
 As shown in the above figure, OpenSDS supports operation on storage pool level, OpenSDS Dock and OpenSDS profile. Storage pool is an abstraction that admin could define. Profile is another OpenSDS feature that we want the controller to be profile/policy driven so that user could have a declarative way of requiring storage resource. We will cover profile and dock in later sections in detail.
 
@@ -59,7 +59,7 @@ Moreover, OpenSDS also could connect to external **policy engines** like **[OPA]
 
 * Control layer: the functionality of this layer is carried out by the *volumecontroller* function which interacts with the hub to enforce the decisions made by the controller module.
 
-##### hub module
+#### *Hub Module*
 
 The hub module also has a layered architecture: dock layer and driver layer.
 
