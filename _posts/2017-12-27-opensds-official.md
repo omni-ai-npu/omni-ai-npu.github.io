@@ -53,6 +53,18 @@ The Zealand Release is the beta release of OpenSDS software (yes this is a beta 
 
 As shown in the above figure, OpenSDS software consists of two main components: **Controller** and **NBP (North Bound Plugin)**, both of which adopt a **layered architecture** that standardize the management workflow. We will go into the details of the two components in the following subsections:
 
+### Sushi - OpenSDS Northbound Plugin Project
+
+OpenSDS [Sushi](https://github.com/opensds/nbp) project also has a layered architecture: plugin layer and client layer.
+
+#### Plugin layer 
+
+Provides the Flex plugin and external storage provisioner for OpenSDS to be used as a southbound to Kubernetes. Sushi also provides the plugin for [CSI v0.1.0](https://github.com/container-storage-interface/spec/releases/tag/v0.1.0) in Kubernetes 1.9 and service broker which is used for integration with [Kubernetes Service Catalog](https://github.com/kubernetes-incubator/service-catalog). It also provides the functionality of attach/detach/ for iscsi and rbd in Zealand release.
+
+#### Client layer 
+
+Provides opensds client and serves as a SDK for interacting with the OpenSDS Controller.
+
 ### Hotpot - OpenSDS Controller Project
 
 Sitting at the core of OpenSDS architecture is the OpenSDS controller component developed by the [Hotpot](https://github.com/opensds/opensds) project team. OpenSDS controller project adopted a microservice and layered architecture. It got three submodules: controller, hub and db.
@@ -99,22 +111,6 @@ All of the storage resource drivers could be found at this layer. For Zealand re
 
 The DB module is designed to be pluggable and our default option is to use [ETCD](https://github.com/coreos/etcd). ETCD will store all the OpenSDS cluster config and state information.
 
-### Sushi - OpenSDS Northbound Plugin Project
-
-OpenSDS [Sushi](https://github.com/opensds/nbp) project also has a layered architecture: plugin layer and client layer.
-
-#### Plugin layer 
-
-Provides the Flex plugin and external storage provisioner for OpenSDS to be used as a southbound to Kubernetes. Sushi also provides the plugin for CSI alpha version in Kubernetes 1.9 and service broker which is used for integration with Kubernetes Service Catalog. It also provides the functionality of attach/detach/ for iscsi and rbd in Zealand release.
-
-#### Client layer 
-
-Provides opensds client and serves as a SDK for interacting with the OpenSDS Controller.
-
-### Play Around With OpenSDS Zealand
-
-Please checkout detail procedures for playing around OpenSDS from the [wiki](https://github.com/opensds/opensds/wiki). In a word OpenSDS could be deployed via Ansible and also available in docker format.
-
 ## Service Oriented Storage Orchestration
 
 One of the new features we experimented with OpenSDS is to adopt a new service oriented storage architecture which could be illustrated as follows:
@@ -137,7 +133,7 @@ In this way we provide a nice out-of-band storage service for Kubernetes users, 
 
 Detailed procedure on how you could play OpenSDS with Service Catalog is [here](https://github.com/opensds/nbp/blob/master/service-broker/INSTALL.md)
 
-### More on Service Broker
+### More on Open Service Broker API
 
 OpenSDS team has a strong intention to work with the OSB API community in the future to forging the way of storage service. As a matter of fact OpenSDS service broker implementation has been documented as one of the [official use cases](https://github.com/openservicebrokerapi/servicebroker/blob/master/gettingStarted.md#go)
 
@@ -145,11 +141,18 @@ OpenSDS team has a strong intention to work with the OSB API community in the fu
 
 * [OPNFV Stor4NFV project](https://wiki.opnfv.org/display/STOR/Stor4NFV+Architecture)
 
+## Play Around With OpenSDS Zealand
+
+Please checkout detail procedures for playing around OpenSDS from the [wiki](https://github.com/opensds/opensds/wiki). In a word OpenSDS could be deployed via Ansible and also available in docker format. You could also watch on Youtube for all the [demo](https://www.youtube.com/results?search_query=opensds+demo) we have done in 2017
+
 # The Future
 
 OpenSDS team is looking forward to have the first official release Aruba next year. We welcome developers to join us in this exciting venture and also users to provide feedback in our development cycle.
 
-We will look for helps on monitoring and tracing components for OpenSDS. We will also be looking at adding file and object interface for OpenSDS controller. Machine learning is another aspect we will actively investigate in 2018. More detailed roadmap for controller project could be found [here](https://github.com/opensds/opensds/wiki/OpenSDS-Controller-Project-Roadmap)
+We will look for helps on monitoring and tracing components for OpenSDS. We will also be looking at adding file and object interface for OpenSDS controller. Machine learning is another aspect we will actively investigate in 2018. We will provide ooficial integration method
+with OpenStack (the current experiment is to integrate through heat) and Apache Mesos.
+
+More detailed roadmap for controller project could be found [here](https://github.com/opensds/opensds/wiki/OpenSDS-Controller-Project-Roadmap)
 
 Please feel free to contact our team via the following methods:
 * [Slack](https://opensds.slack.com)
