@@ -150,7 +150,7 @@ Please checkout detail procedures for playing around OpenSDS from the [wiki](htt
 OpenSDS team is looking forward to have the first official release Aruba next year. We welcome developers to join us in this exciting venture and also users to provide feedback in our development cycle.
 
 We will look for helps on monitoring and tracing components for OpenSDS. We will also be looking at adding file and object interface for OpenSDS controller. Machine learning is another aspect we will actively investigate in 2018. We will provide ooficial integration method
-with OpenStack (the current experiment is to integrate through heat) and Apache Mesos.
+with **OpenStack** (the [current experiment](https://wiki.opnfv.org/download/attachments/13209797/image2017-12-13%2019%3A33%3A41.png?version=1&modificationDate=1513164823000&api=v2) is to integrate through heat) and **Apache Mesos**.
 
 More detailed roadmap for controller project could be found [here](https://github.com/opensds/opensds/wiki/OpenSDS-Controller-Project-Roadmap)
 
