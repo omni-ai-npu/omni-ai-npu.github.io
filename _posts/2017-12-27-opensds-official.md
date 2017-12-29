@@ -5,7 +5,7 @@ title: Make Storage Simple Again With OpenSDS
 
 *[OpenSDS](https://opensds.io) is a new collaborative open source community under Linux Foundation established by the end of 2016. Throughout year 2017 the core dev team has been working arduously on prototyping various exciting new ideas. Now we are proud to announce the [beta release](https://github.com/opensds/opensds/tree/stable/zealand) coming out of the OpenSDS community, and this blog post aims to provide a detail run down of the OpenSDS design and functionality*
 
-*Huge thanks to our dev team Leon Wang, Xing Yang, Edison Xiang, Erik Xu and other members to make this release happen*
+*Huge thanks to our dev team Leon Wang(@leonwanghui), Xing Yang(@xing-yang), Edison Xiang(@edisonxiang), Erik Xu(@wisererik) and other members to make this release happen*
 
 # Background
 
@@ -99,7 +99,7 @@ The hub module also has a layered architecture: dock layer and driver layer.
 
 The Dock provides a unified southbound abstraction layer for all the underlying storage resources. It interacts with controller module via gRPC which provides a nice decoupling feature. In essence the user could deploy OpenSDS dock on any number of storage nodes where OpenSDS controller module deployed in the master node. This microservice architecture enables OpenSDS to avoid the general pitfall of a centralized controller that it could not be distributed or scaled out very good.
 
-The usage of gRPC also enables OpenSDS Dock to add many southbound resource type as it see fit. For example we have experiments with [CSI](https://github.com/opensds/opensds/tree/csi-driver) and [Swordfish](https://github.com/opensds/opensds/tree/swordfish_implementation) southbound supports by adding their protobuf based data models to the Dock. The CSI southbound support experiment (which was inspired by my convo with **Apache Mesos** and CSI lead Jieyu) is especially interesting because it positions OpenSDS as a **SO (Storage Orchestrator)** in addition to the CO (container orchestrator) concept defined in the current CSI spec. *（Be noted that both CSI and Swordfish southbound implementation are not included in Zealand release for its experiment nature.）*
+The usage of gRPC also enables OpenSDS Dock to add many southbound resource type as it see fit. For example we have experiments with [CSI](https://github.com/opensds/opensds/tree/csi-driver) and [Swordfish](https://github.com/opensds/opensds/tree/swordfish_implementation) southbound supports by adding their protobuf based data models to the Dock. The CSI southbound support experiment (which was inspired by my convo with **Apache Mesos** and CSI lead [@Jie Yu](https://twitter.com/jie_yu)) is especially interesting because it positions OpenSDS as a **SO (Storage Orchestrator)** in addition to the CO (container orchestrator) concept defined in the current CSI spec. *（Be noted that both CSI and Swordfish southbound implementation are not included in Zealand release for its experiment nature.）*
 
 <img src="https://github.com/hannibalhuang/hannibalhuang.github.io/raw/master/image/opensds-csi-sb-impact.PNG" width="300" height="200">
 
