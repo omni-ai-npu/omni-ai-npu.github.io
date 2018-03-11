@@ -42,10 +42,11 @@ From the Subaru CAN ID document, I identify at least initially the above mention
  *Captured Data During Hit*
 ![Captured Data After Hit](https://raw.githubusercontent.com/hannibalhuang/hannibalhuang.github.io/master/image/Cabana%20Crash%202.png)
  *Captured Data After Hit*
-As could be seen above, for 0:d1, before hit there is no signal on the break (byte 3), and when the hit happened byte 3 suddenly goes crazy and after hit all the speed and break bytes turned to zero.
+ 
+As could be seen above, for 0:d1, before hit there is no signal on the break (byte 3), and when the hit happened byte 3 suddenly goes crazy and after hit all the speed and break bytes turn to zero.
 
 For 0:d3, Byte 5 always got value before and during the hit, but remains 98 after the hit. This I assume is because the Byte 5 is signalling the whether the break pedal is pressed. (I of course kept pressing the break pedal for quite a while after the hit)
 
 ### Next
 
-This is a very coarse attempt on a preliminary examination of what happens in the CAN bus when an accident happens. I will explore more CAN ID meanings (there are quite a few undetermind) and see if i could paint a more and more holitic picture.
+This is a very coarse attempt on a preliminary examination of what happens in the CAN bus when an accident happens. I will explore more CAN ID meanings (there are quite a few undetermind) and see if i could paint a more holistic picture.
