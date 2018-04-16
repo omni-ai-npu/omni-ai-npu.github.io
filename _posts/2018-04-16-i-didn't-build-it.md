@@ -9,7 +9,7 @@ Back in late Feb when we were at OpenStack Rocky PTG Dublin, a question was rais
 
 I didn't build it as a some kind of major architect who will envision the whole thing and put out a mandate to have people build a project exactly like I instructed. When Cyborg was conceived there was no code, only idea brainstorming. 
 
-This is still a general but huge misconception among the companies, including tier one players, which contributing to open source community and try to monetize by building product upon it, that you gotta have an architect put an "awesome" design (which usually means finished product) out and the open source team hopefully try to "sell" that to the community. This is dead wrong.
+This is still a general but huge misconception among the companies, including tier one players, that you gotta have an architect put an "awesome" design (which usually means finished product) out and the open source team hopefully manages to "sell" that to the community. For companies that are contributing to open source community and trying to monetize by building product upon it, this could not be more wrong.
 
 **Open Source Community Is About Whiteboxing The Architect Role**
 
@@ -17,7 +17,7 @@ I think this is the key for people to truly understand the economics and the dyn
 
 Well there is no painkiller unless you start to actively participate, have an active and open discussion and let the many great architects in the community crowd source the design with a consensus reaching mechanism.
 
-Yes, you saw that, I didn't mean the architect role will go away, I meant the single architect type-a personality will go away and the community architect team will take its place. Moreover, consensus reaching means defacto standard effect immediately (yes your customer is watching the community too). Just think about the time and money a company usually needs to invest to make its product a widely accepted and adopted industry standard. 
+Yes, of course I didn't mean the architect role will go away. What I meant is that the single architect type-a personality will go away and the community architect team will take its place. Moreover, consensus reaching means defacto standard effect immediately (note: your customer is watching the community too). Just think about the time and money a company usually needs to invest to make its product a widely accepted and adopted industry standard. 
 
 **The Value Is In The People**
 
