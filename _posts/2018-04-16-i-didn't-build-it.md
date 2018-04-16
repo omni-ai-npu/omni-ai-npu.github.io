@@ -3,17 +3,17 @@ layout: post
 title: I Didn't Build It
 ---
 
-Back in late Feb when we were at OpenStack Rocky PTG Dublin, a question was raised to me by a friend that how did I transform myself from to developer to an architect like role, for example building the [Cyborg project](https://wiki.openstack.org/wiki/Cyborg). Well I never thought myself in that regard due to the very answer which in my opinion is appropriate to the question:
+Back in late Feb when we were at OpenStack Rocky PTG Dublin, a question was raised to me by a friend that how did I transform myself from a developer to an architect like role, for example building the [Cyborg project](https://wiki.openstack.org/wiki/Cyborg). Well I never thought myself in that regard due to the very answer fitted to the question:
 
 **I didn't build it**
 
-I didn't build it in a sense that I would be some kind of major architect who will envision the whole thing and put out a mandate to have people build a project exactly like I instructed. When Cyborg was conceived there was no code, only idea brainstorming. 
+I didn't build it as a some kind of major architect who will envision the whole thing and put out a mandate to have people build a project exactly like I instructed. When Cyborg was conceived there was no code, only idea brainstorming. 
 
-This is still a general but huge misconception among the companies, including tier one players, which contributing to open source community and try to monetize by building product upon it, that you gotta have an architect put a holistic design out and the open source team hopefully try to "sell" that to the community. This is dead wrong.
+This is still a general but huge misconception among the companies, including tier one players, which contributing to open source community and try to monetize by building product upon it, that you gotta have an architect put an "awesome" design (which usually means finished product) out and the open source team hopefully try to "sell" that to the community. This is dead wrong.
 
 **Open Source Community Is About Whiteboxing The Architect Role**
 
-I think this is the key for people to truly understand the economics and the dynamics behind open source community developments. For the companies that find it hard to see how open source could help reduce their cost, they often forget they still try to design an inhouse prototype upfront and want the community to accept the whole deal based upon the reasoning set by the company's MKT team, and while the prolonging persvusion falls apart, it has to struggle to make alignments with the inhouse design and the community version, thus the pain.
+I think this is the key for people to truly understand the economics and the dynamics behind open source community developments. For the companies that find it hard to see how open source could help reduce their cost, they often forget they still try to design an inhouse prototype upfront and want the community to accept the whole deal based upon the reasoning set by probably the company's MKT team, and while the prolonging persuasion falls apart, it has to struggle to make alignments with the inhouse design and the community version, thus the pain.
 
 Well there is no painkiller unless you start to actively participate, have an active and open discussion and let the many great architects in the community crowd source the design with a consensus reaching mechanism.
 
