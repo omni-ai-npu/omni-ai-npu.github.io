@@ -11,7 +11,11 @@ I'm not supper duped about winning a seat, but rather to try to work and solve s
 
 I sorta started a firestorm in the community with a governance [patch](https://review.openstack.org/602697) after getting back from Denver PTG. I won't get into the back and forth of whether proprietary tools should be allowed at all or whether this should be solved via resolution. What I want to point out is that individual community members have started joining wechat, and it works better than I thought. Jokes and emoticons are all over the place, and translation support is utilized in its maximum capacity. Simple request should have simple and direct answers.
 
-The contrast depicted above says something about the large scale open source communities: **Being only globally accessible does not mean you are a global open source community**. It only begins when people with the dominating culture starts to get out of the comfort zone and try out new things, things that might not make sense to you but does to other members of the community. 
+The contrast depicted above says something about the large scale open source communities: 
+
+**Being only globally accessible does not mean you are a global open source community**. 
+
+It only begins when people with the dominating culture starts to get out of the comfort zone and try out new things, things that might not make sense to you but does to other members of the community. 
 
 This is not a problem limited to OpenStack. Nowadays we have huge open source conference which basically tours around the world, but appearances could be deceiving. It is when people from the globe that could participate the community in the way that they feel the most comfortable with, and then gradually adapt and engage in a more traditional open source way, the loop of the culture could be view as a closed one.
 
@@ -19,7 +23,11 @@ To quote an initiative in OpenStack, the First Contact is the most significant j
 
 ## Close the user feedback loop
 
-All open source projects suffer a similar problem: a disjoint between the devs and the user. While communities like OpenStack, OPNFV, CNCF/k8s all have developed mechanisms like end user working groups to deal with the issue, but there is still a clear gap : **there is no constraint that user could put on the development** Most of the time users just have to pray that some of their requirements got implemented and delivered.
+All open source projects suffer a similar problem: a disjoint between the devs and the user. While communities like OpenStack, OPNFV, CNCF/k8s all have developed mechanisms like end user working groups to deal with the issue, but there is still a clear gap : 
+
+**there is no constraint that user could put on the development** 
+
+Most of the time users just have to pray that some of their requirements got implemented and delivered.
 
 That is why during the past PTG, OpenStack WGs and UC starts to look towards a more [active role](https://review.openstack.org/602799), and hopefully the TC does as well, to "nudge" the community to be responsive to the user requirements. After all at the end of the day, it is the adoption that speaks if a community is successful.
 
