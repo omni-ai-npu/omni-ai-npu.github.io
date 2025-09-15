@@ -3,8 +3,8 @@ layout: page
 title: About
 ---
 
-####  Bio
-I'm currently working for Huawei as a standard engineer covering both open standard and open source operations. My focus areas span from standard work including ETSI NFV, SNIA and OCI Spec; to open source projects such as OpenStack, Open Compute Project, OPNFV, Kinetic Open Storage Project
+####  Project Introduction
+Omni_Infer is a suite of inference accelerators designed for the Ascend NPU platform, offering native support and an expanding feature set.
 
 ####  Contact
 * [Company Email](mailto:huangzhipeng@huawei.com)
