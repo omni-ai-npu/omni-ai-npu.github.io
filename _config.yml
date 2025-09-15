@@ -6,10 +6,10 @@ highlighter:      rouge
 permalink:        pretty
 
 # Setup
-title:            No Painkiller For Cloud
-tagline:          'Break it then fix it, but one at a time'
-description:      'Thoughts on Virtualization, Storage, Networking, Open Source and Open Standard'
-url:              http://hannibalhuang.github.io
+title:            Omni-AI Technology Blog
+tagline:          'High Performance, Decoupled Architecture'
+description:      'Suite of NPU native accelerators and an expanding feature set'
+url:              http://omni-ai-npu.github.io
 baseurl:          /
 
 author:
@@ -22,4 +22,4 @@ paginate:         5
 version:          2.1.0
 
 github:
-  repo:           https://github.com/hannibalhuang/
+  repo:           https://github.com/omni-ai-npu/
