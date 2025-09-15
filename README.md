@@ -1,4 +1,4 @@
-# hannibalhuang.github.io
+# omni-ai.github.io
 
-My Personal Tech Blog
+Tech Blog about all the omni-ai optmizations for LLM Serving and Training
 
