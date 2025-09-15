@@ -22,4 +22,4 @@ paginate:         5
 version:          2.1.0
 
 github:
-  repo:           https://github.com/omni-ai-npu/
+  repo:           https://github.com/omni-ai-npu/omni-infer
